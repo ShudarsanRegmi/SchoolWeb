@@ -1,0 +1,13 @@
+.items {
+	background-color: yellow;
+}
+
+#emp {
+	background-color: orange;
+	grid-column: 2;
+	grid-row: 1/3;
+	background-color: green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
