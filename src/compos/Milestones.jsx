@@ -1,9 +1,9 @@
 const MileChildren = ({head,desc})=> {
 	return(
 		<>
-			<div className="childCon">
-				<h1>{head}</h1>	
-				<span  className="inline-block">{desc}</span>
+			<div className="childCon border-2 border-gray-700 m-3 flex justify-center items-center flex-col">
+				<h1 className="font-bold text-5xl">{head}</h1>	
+				<span  className="text-center text-sm uppercase pt-4 inline-block w-[60%]">{desc}</span>
 			</div>
 		</>
 	);
@@ -19,7 +19,7 @@ const Milestones = ()=> {
 	];
 	return(
 		<>
-			<div className="milesCon">
+			<div className="milesCon flex py-20 bg-[#1f1a47] text-white flex-wrap justify-center">
 				{MileChildrens.map((item,index)=>{
 					return <MileChildren head={item.head} desc={item.desc} key={index} />
 				})}

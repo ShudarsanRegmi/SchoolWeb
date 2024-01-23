@@ -4,7 +4,7 @@ function NewsCard({dataObject}) {
 	return(
 		<>
 			<div className="outer bg-green-500 m-2 mb-4 flex flex-col border-2 border-red-500 max-w-80 relative pb-3 rounded-lg">
-				<img max-w-24 src={dataObject.image} alt=""/>
+				<img src={dataObject.image} alt=""/>
 				<div className="belowCon p-2 flex flex-col">
 					<b className="truncate">{dataObject.title}</b>
 					<span className="truncate overflow-hidden">{dataObject.leadLine}</span>
