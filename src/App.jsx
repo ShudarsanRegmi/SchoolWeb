@@ -9,6 +9,7 @@ import Milestones from './compos/Milestones'
 import Focus from './compos/Focus'
 import Gallery from './compos/Gallery'
 import Keepmeupdated from './compos/Keepmeupdated'
+import FooterLinks from './compos/FooterLinks/FooterLinks'
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
 		<Focus />
 		<Gallery />
 		<Keepmeupdated />
+		<FooterLinks />
     </>
   )
 }
