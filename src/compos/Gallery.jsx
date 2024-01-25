@@ -8,12 +8,15 @@ import img5 from '../../public/img5.webp';
 import {East} from '@mui/icons-material';
 
 function handleMouseOver(e) {
-	e.stopPropagation();
+	console.log(e.currentTarget.children[2]);
+	e.currentTarget.children[2].style.transform = "translateY(0%)";
 	console.log(e.currentTarget.children[1])
 	e.currentTarget.children[1].style.visibility = "hidden";
 	// e.currentTarget.style.visibility = "hidden";
 }
 function handleMouseOut(e) {
+	console.log(e.currentTarget.children[2]);
+	e.currentTarget.children[2].style.transform = "translateY(100%)";
 	console.log(e.currentTarget.children[1])
 	e.currentTarget.children[1].style.visibility = "visible";
 }
@@ -23,12 +26,12 @@ const Imagecard = ({dataObject})=> {
 	console.log(dataObject);
 	return(
 		<>
-			<div className="galCardCon border-2 border-green-700 relative  cursor-pointer " onMouseOver={(e)=>{handleMouseOver(e)}} onMouseOut={handleMouseOut} >
+			<div className="galCardCon border-2 border-green-700 relative  cursor-pointer overflow-hidden" onMouseOver={(e)=>{handleMouseOver(e)}} onMouseOut={handleMouseOut} >
 					<img src={dataObject.img} className='' alt=""/>
 					<div className="overlay h-[90%] w-[90%] border-2 border-white absolute top-0 right-0 border-r-0 border-b-0 transition-all transition-duration-500 transition-delay-500 ">
 						<h1 className='text-white pl-2 font-bold text-2xl uppercase font-mono tracking-tight underline' >{dataObject.header}</h1>	
 					</div>
-				<div className="jhyal p-5 flex flex-col justify-center absolute bottom-0 bg-gray-700 text-white w-[100%]">
+				<div className="jhyal p-5 flex flex-col justify-center absolute bottom-0 bg-gray-700 text-white w-[100%] -translate-y-[-100%] transition duration-[300ms]">
 					<h1 className="pl-3 uppercase font-bold">{dataObject.header}</h1>	
 					<a className='text-center p-2 px-3 border-2 border-white hover:bg-white hover:text-black transition-all' href="">Explore <East className='ml-5' /> </a>
 				</div>
