@@ -1,4 +1,5 @@
 import LinksCon from "./LinksCon";
+import Copyright from "./Copyright";
 
 import img1 from '../../../public/footerImages/1.webp'
 import img2 from '../../../public/footerImages/2.webp'
@@ -18,6 +19,8 @@ const FooterLinks = ()=> {
 					<img src={img4} alt=""/>
 				</div>	
 			</div>
+
+			<Copyright />
 		</>
 	);
 }
